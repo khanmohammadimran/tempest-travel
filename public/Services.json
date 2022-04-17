@@ -3,60 +3,21 @@
         "id": 1,
         "price": "$29/ per day",
         "name": "Standard",
-        "image": "",
-        "description": "I will setup and guide you for all the basic that takes to travel",
-        "packages": [
-            {
-                "1": "Organize your travel plan"
-            },
-            {
-                "2": "Find places near hotel"
-            },
-            {
-                "3": "Tallies and displays travel stats"
-            }
-        ]
+        "img": "https://i.postimg.cc/rFvxhPL3/standard.png",
+        "description": "I will setup and guide you for all the basic that takes to travel. Organize your travel plan and find places near hotel"
     },
     {
         "id": 2,
         "price": "$59/ per day",
         "name": "Essentials",
-        "image": "",
-        "description": "Advance features for traveling that are needed",
-        "packages": [
-            {
-                "1": "Tracks reward programs"
-            },
-            {
-                "2": "Find places near hotel"
-            },
-            {
-                "4": "Find alternative flights"
-            },
-            {
-                "5": "Show transportation option"
-            }
-        ]
+        "img": "https://i.postimg.cc/gctvh0tY/Essential.png",
+        "description": "Advance features for traveling that are needed. Tracks reward programs. Find places near hotel and Find alternative flights too. Also I will show transportation option"
     },
     {
         "id": 3,
         "price": "$129/ per day",
         "name": "Premium",
-        "image": "",
-        "description": "Advanced features for pros who need more customization",
-        "packages": [
-            {
-                "1": "Country-specific travel info"
-            },
-            {
-                "2": "Finds better hotels"
-            },
-            {
-                "3": "Shoes security wait items"
-            },
-            {
-                "4": "Track reward programs"
-            }
-        ]
+        "img": "https://i.postimg.cc/8PFLmVxL/Premium.png",
+        "description": "Advanced features for pros who need more customization. Country-specific travel info. Finds better hotels, Shoes security wait items also Track reward programs"
     }
 ]
