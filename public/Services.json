@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "price": "$29/ per day",
+        "name": "Standard",
+        "image": "",
+        "description": "I will setup and guide you for all the basic that takes to travel",
+        "package": {
+            "1": "Organize your travel plan",
+            "2": "Find places near hotel",
+            "3": "Tallies and displays travel stats,"
+        }
+    },
+    {
+        "id": 2,
+        "price": "$59/ per day",
+        "name": "Essentials",
+        "image": "",
+        "description": "Advance features for traveling that are needed",
+        "package": {
+            "1": "Tracks reward programs",
+            "2": "Find places near hotel",
+            "3": "Find alternative flights",
+            "4": "Show transportation option"
+        }
+    },
+    {
+        "id": 3,
+        "price": "$129/ per day",
+        "name": "Premium",
+        "image": "",
+        "description": "Advanced features for pros who need more customization",
+        "package": {
+            "1": "Country-specific travel info",
+            "2": "Finds better hotels",
+            "3": "Shoes security wait items",
+            "4": "Track reward programs"
+        }
+    }
+]
