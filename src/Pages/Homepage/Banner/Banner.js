@@ -43,7 +43,7 @@ const Banner = () => {
                 />
 
                 <Carousel.Caption>
-                    <h1 className='display-1 title-text'>Book A Ticket and Just Leave.</h1>
+                    <h1 className='display-1 title-text'>Book A Ticket <br /> Now</h1>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

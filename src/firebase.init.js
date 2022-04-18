@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCzptDzu2akyr_JgHteQEk2yUA_GG8FQhs",
-    authDomain: "tempest-travel.firebaseapp.com",
-    projectId: "tempest-travel",
-    storageBucket: "tempest-travel.appspot.com",
-    messagingSenderId: "673984084746",
-    appId: "1:673984084746:web:93059b64f8876c6a3558f3"
+    apiKey: process.env.REACT_APP_apiKey,
+    authDomain: process.env.REACT_APP_authDomain,
+    projectId: process.env.REACT_APP_projectId,
+    storageBucket: process.env.REACT_APP_storageBucket,
+    messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
