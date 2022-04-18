@@ -1,6 +1,12 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Click Here To See The Live Website](https://dancing-alpaca-52c555.netlify.app/)
+
+* Created a React website using "React Router".
+* Using react firebase hook.
+* Add Email and Password Authentication and Google Sign in Authentication from Firebase.
+* Add Some General Question Answer on Blog Section.
+* Add my future goals in About Me Section.
 
 ## Available Scripts
 
