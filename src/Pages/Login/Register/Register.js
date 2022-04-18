@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
 
@@ -11,7 +12,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
     const textRef = useRef('');
@@ -27,6 +28,13 @@ const Register = () => {
         navigate('/home')
     }
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+    if (error) {
+        return <p>Sent a verification code to your mail</p>
+    }
+
     const handleRegister = event => {
         event.preventDefault();
         const text = textRef.current.value
@@ -40,7 +48,7 @@ const Register = () => {
 
 
     return (
-        <div className='container w-50 mx-auto'>
+        <div className='container w-50 mx-auto vh-100'>
             <h2 className='text-center text-primary my-3'>Please Register</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" >
@@ -67,6 +75,7 @@ const Register = () => {
                 </Button>
             </Form>
             <p>Already have an account?<Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

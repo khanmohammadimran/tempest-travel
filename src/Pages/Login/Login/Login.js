@@ -1,13 +1,16 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
-    const emailRef = useRef('')
-    const passwordRef = useRef('')
-    const navigate = useNavigate()
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
 
     const [
@@ -17,9 +20,20 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
 
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true });
     }
 
 
@@ -37,7 +51,7 @@ const Login = () => {
 
 
     return (
-        <div className='container w-50 mx-auto'>
+        <div className='container w-50 mx-auto vh-100'>
             <h2 className='text-center my-3'>Please login to <span className='text-danger'>continue</span> </h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -60,6 +74,7 @@ const Login = () => {
                 </Button>
             </Form>
             <p>New to Tempest Travel? <Link to='/register' className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
