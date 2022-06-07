@@ -2,11 +2,13 @@
 
 [Click Here To See The Live Website](https://dancing-alpaca-52c555.netlify.app/)
 
-* Created a React website using "React Router".
-* Using react firebase hook.
-* Add Email and Password Authentication and Google Sign in Authentication from Firebase.
-* Add Some General Question Answer on Blog Section.
-* Add my future goals in About Me Section.
+* Created a tourist guide service website using React.
+* Implement Firebase for Authentications.
+* Implement React js, React Router and Bootstrap framework.
+* Used react firebase hook.
+* Used Email and Password Authentication and Google Sign in Authentication from Firebase.
+* Adding Some General Question Answer on Blog Section.
+* Add my future goals in the About Me Section.
 
 ## Available Scripts
 
